@@ -36,6 +36,11 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+*:focus {
+  outline: 2px dashed var(--primary);
+  outline-offset: 3px;
+}
 /* -----------------BUTTONS-------------------- */
 .button {
   padding: 12px 39px;
