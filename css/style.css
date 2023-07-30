@@ -2,6 +2,7 @@
 /* ------------------GLOBAL-------------------- */
 :root {
   --primary: #ea625c;
+  --primary-dark: #c9514c;
   --text-color: #333;
 }
 
@@ -41,16 +42,6 @@ img {
   outline: 2px dashed var(--primary);
   outline-offset: 3px;
 }
-/* -----------------BUTTONS-------------------- */
-.button {
-  padding: 12px 39px;
-  border: 0;
-  font-size: 18px;
-  font-weight: 700;
-  color: #fff;
-  text-transform: uppercase;
-  background-color: var(--button-color);
-}
 
 /* -------------CONTAINER---------------------- */
 .container {
@@ -62,6 +53,28 @@ img {
   margin-left: auto;
 }
 
+/* -----------------BUTTONS-------------------- */
+.button {
+  display: inline-block;
+  padding: 12px 39px;
+  border: 0;
+  background-color: var(--primary);
+  color: #fff;
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: var(--primary-dark);
+}
+
+.button:active {
+  opacity: 0.6;
+}
 
 /* -----------------HEADER---------------------- */
 .header {
@@ -139,48 +152,39 @@ img {
   padding: 0;
   margin: 0;
 }
+
 /* ------------------HERO---------------------- */
 .hero {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-top: 80px;
+  padding-top: 140px;
+  padding-bottom: 185px;
+  border-bottom: 2px solid #888;
+  background-image: url('/img/intro-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: left calc(50% + 545px) bottom;
 }
 
-.hero__content {
-  width: 490px;
+/* ------------------LEAD CTA------------------- */
+.lead-cta {
+  width: 100%;
+  max-width: 490px;
 }
 
-.hero__heading1 {
-  margin: 0;
+.lead-cta__heading2 {
+  margin-top: 0;
   margin-bottom: 30px;
   font-size: 50px;
   line-height: 1.2;
   color: #000;
 }
 
-.hero__text {
-  padding-left: 40px;
-  margin: 0;
+.lead-cta__text {
+  padding-left: 37px;
+  margin-top: 0;
   margin-bottom: 30px;
-  border-left: 3px solid #888;
-  font-size: 16px;
   color: #777;
+  border-left: 3px solid #888;
 }
 
-.hero__img {
-  width: 587px;
-  height: 565px;
-  background-image: url('/img/intro-bg.jpg');
-  background-position: right center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-.main-content__dvider {
-  margin: 0;
-  border: 2px solid #ddd;
-}
 
 /* -----------------FEATURES------------------- */
 .features {
@@ -214,7 +218,7 @@ img {
 
 
 
-/* -----------RETINA DISPLAY------------------- */
+/* -----------------RETINA BG-------------------*/
 @media
 only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (   min--moz-device-pixel-ratio: 2),
@@ -222,7 +226,7 @@ only screen and (     -o-min-device-pixel-ratio: 2/1),
 only screen and (        min-device-pixel-ratio: 2),
 only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) {
-  .hero__img {
+  .hero {
     background-image: url('/img/intro-bg@2x.jpg');
   }
 }
