@@ -18,28 +18,29 @@
 <body>
 
   <header class="header">
-    <div class="container">
-      <nav class="sitenav">
-        <!--------------------Sitenav-Logo ---------------->
-        <a class="sitenav__logo-link" href="index.html">
-          <img src="img/Vector.jpg" alt="logo" class="sitenav__logo" width="35" height="42" srcset="img/Vector.jpg 1x, img/Vector@2x.jpg 2x"></a>
+    <div class="header__container container">
+        <!--------------------Header-Logo ---------------------------->
+        <a class="header__logo" href="index.html">
+          <img src="img/Vector.svg" alt="logo" class="logo-img" width="35" height="42"</a>
 
-        <!--------------------Sitenav-Logo ---------------->
-          <div class="sitenav__wrapper">
+        <!--------------------Navigation menu ---------------->
+          <nav class="sitenav">
             <ul class="sitenav__list">
-              <li class="sitenav__item"><a href="#" class="sitenav__list-link">Home</a>
+              <li class="sitenav__item"><a href="#" class="sitenav__link">Home</a>
               </li>
-              <li class="sitenav__item"><a href="#" class="sitenav__list-link">About</a>
+              <li class="sitenav__item"><a href="#" class="sitenav__link">About</a>
               </li>
-              <li class="sitenav__item"><a href="#" class="sitenav__list-link">Offers</a>
+              <li class="sitenav__item"><a href="#" class="sitenav__link">Offers</a>
               </li>
-              <li class="sitenav__item"><a href="#" class="sitenav__list-link">Services</a>
+              <li class="sitenav__item"><a href="#" class="sitenav__link">Services</a>
               </li>
             </ul>
+          </nav>
 
-            <a class="sitenav__support-link" href="#">How can we help you?</a>
-          </div>
-      </nav>
+          <form class="search-form" action="https://echo.htmlacademy.ru"  method="get">
+            <input class="form-search" type="search" name="search"
+            placeholder="How can we help you?" aria-label="search" required>
+          </form>
     </div>
   </header>
 
