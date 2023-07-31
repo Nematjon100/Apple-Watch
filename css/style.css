@@ -56,6 +56,8 @@ img {
 /* -----------------BUTTONS-------------------- */
 .button {
   display: inline-block;
+  min-width: 260px;
+  text-align: center;
   padding: 12px 39px;
   border: 0;
   background-color: var(--primary);
@@ -76,6 +78,28 @@ img {
   opacity: 0.6;
 }
 
+.lined-link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--primary);
+  text-transform: uppercase;
+}
+
+.lined-link::before {
+  width: 40px;
+  height: 3px;
+  margin-right: 10px;
+  background-color: var(--primary);
+  content: '';
+  transition: width 0.3s ease;
+}
+
+.lined-link:hover::before {
+  width: 60px;
+}
 /* -----------------HEADER---------------------- */
 .header {
   padding-top: 30px;
@@ -177,6 +201,10 @@ img {
   color: #000;
 }
 
+.lead-cta__white .lead-cta__heading2 {
+  color: #fff;
+}
+
 .lead-cta__text {
   padding-left: 37px;
   margin-top: 0;
@@ -185,6 +213,10 @@ img {
   border-left: 3px solid #888;
 }
 
+.lead-cta__white .lead-cta__text {
+  color: #fff;
+  border-left: 3px solid #fff;
+}
 
 /* -----------------FEATURES------------------- */
 .features {
@@ -194,7 +226,6 @@ img {
 
 .features__list {
   display: flex;
-  /* justify-content: space-between; */
   padding: 0;
   margin: 0;
   list-style: none;
@@ -207,11 +238,69 @@ img {
 .features__item:not(:last-child) {
   margin-right: 80px;
 }
+
 .features__heading3 {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #222;
+  text-transform: uppercase;
 }
-.features__info {
+
+.features__text {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #333;
 }
-.features__more {
+
+.features__dvider {
+  width: 8px;
+  height: 8px;
+  margin: 0;
+  border: 0;
+  background-color: #ddd;
+  box-shadow: 16px 0 0 #ddd,
+  32px 0 0 #ddd
+}
+
+
+/* --------------------PROMO------------------ */
+.promo {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.promo-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 600px;
+  padding-top: 70px;
+}
+
+.promo__img {
+  width: 400px;
+  height: 600px;
+  object-fit: cover;
+}
+
+
+/* -----------------RUNNERS-------------------- */
+.runners {
+  padding-top: 240px;
+  padding-bottom: 240px;
+  background-image: url('/img/runners\ 1.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.runners__lead-cta {
+  margin-left: auto;
 }
 
 
